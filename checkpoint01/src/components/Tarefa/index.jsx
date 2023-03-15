@@ -1,16 +1,31 @@
 import style from "./styles.module.css"
+import editar from "../../img/editar.png"
+import remover from "../../img/remover.png"
 
 function Tarefa(props)
 {
     return (
         <div className={style.container}>
-            <p>{props.tarefa.titulo}</p>
-            <p>{props.tarefa.categoria}</p>
-            <p>{props.tarefa.data}</p>
-            <p>{props.tarefa.descricao}</p>
+            <div className={style.nomeDesc}>
+                <p className={style.tituloTar}>{props.tarefa.titulo}</p>
+                <p className={style.categTar}>{props.tarefa.categoria}</p>
+                <p className={style.descrTar}>{props.tarefa.descricao}</p>
+            </div>
 
-            <button onClick={() => props.editarTarefa(props.tarefa)}>Alterar</button>
-            <button onClick={() => props.apagarTarefa(props.tarefa.id)}>Remover</button>
+            <div className={style.controles}>
+                <p className={style.dataTar}>{props.tarefa.data}</p>
+
+                <div className={style.gap}></div>
+
+                <div className={style.botoes}>
+                    <button onClick={() => props.editarTarefa(props.tarefa)}>
+                        <img className={style.botao} src={editar}/>
+                    </button>
+                    <button onClick={() => props.apagarTarefa(props.tarefa.id)}>
+                        <img className={style.botao} src={remover}/>
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }

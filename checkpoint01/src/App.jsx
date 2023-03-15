@@ -63,20 +63,28 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="container">
       <CRUD obterDados={obterDados} editarDados={dadosEdit} title={estadoCRUD === "cadastro" ? "Cadastrar Tarefa" : "Editar Tarefa"} estado={estadoCRUD}/>
 
-      {listaTarefas.length > 0 ? (
-        <ul>
-          {listaTarefas.map((item) => (
-            <li key={item.id}>
-              <Tarefa editarTarefa={editarTarefa} apagarTarefa={apagarTarefa} tarefa={item}/>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>Nenhuma tarefa cadastrada</p>
-      )}
+      <div className="tarefas">
+        <div className="tituloTarefas">
+          <h2 className="h2Tarefas">Minhas tarefas</h2>
+          <div className="gapTarefas"></div>
+          <p className="h3Tarefas">Total: {listaTarefas.length}</p>
+        </div>
+
+        {listaTarefas.length > 0 ? (
+          <ul>
+            {listaTarefas.map((item) => (
+              <li key={item.id}>
+                <Tarefa editarTarefa={editarTarefa} apagarTarefa={apagarTarefa} tarefa={item}/>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="nenhumaTarefa">Nenhuma tarefa cadastrada</p>
+        )}
+      </div>
     </div>
   )
 }

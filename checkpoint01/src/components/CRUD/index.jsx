@@ -46,7 +46,7 @@ function CRUD(props)
 
     return (
         <div className={style.container}>
-            <h2>{props.title}</h2>
+            <h2 className={style.titulo}>{props.title}</h2>
             <input
                 required
                 onChange={(event) => {
@@ -97,7 +97,7 @@ function CRUD(props)
             />
 
             <div>
-                <button onClick={() => {
+                <button className={style.btnSalvar} onClick={() => {
                     dados.id = props.estado === "cadastro" ? 0 : props.editarDados.id
                     dados.titulo = titulo
                     dados.categoria = categoria
@@ -105,14 +105,20 @@ function CRUD(props)
                     dados.descricao = descricao
                     
                     console.log(dados)
-                    props.obterDados(dados)
+                    if((dados.titulo === "") || (dados.data === ""))
+                        alert("Preencha todos os campos obrigatórios para poder salvar!")
+                    else
+                    {
+                        props.obterDados(dados)
                     
-                    setTitulo("")
-                    setCategoria("")
-                    setData("")
-                    setDescricao("")
-                    setFlagEdit(1)
-                    setFlagIni(1)}}>Salvar</button>
+                        setTitulo("")
+                        setCategoria("")
+                        setData("")
+                        setDescricao("")
+                        setFlagEdit(1)
+                        setFlagIni(1)
+                    }
+                    }}>Salvar</button>
             </div>
         </div>
     )

@@ -1,3 +1,50 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 .container{
-    background-color: green;
+    width: 30%;
+    height: 568px;
+}
+
+.titulo{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+input{
+    width: 80%;
+    margin-left: 10%;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+span{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    color: #ff3333;
+}
+
+select{
+    width: 80%;
+    margin-left: 10%;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.btnSalvar{
+    width: 80%;
+    margin-left: 10%;
+    height: 40px;
+    margin-top: 30px;
+    background-color: #ff3333;
+    color: white;
+    border-radius: 5px;
 }

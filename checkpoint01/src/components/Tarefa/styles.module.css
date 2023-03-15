@@ -1,3 +1,52 @@
 .container{
-    background-color: red;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.nomeDesc{
+    margin-left: 2%;
+    width: 85%;
+}
+
+.controles{
+    padding-top: 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.tituloTar{
+    font-weight: bold;
+    font-size: 20px;
+    word-break: break-all;
+    padding-top: 5px;
+}
+
+.descrTar{
+    padding-top: 10px;
+    word-break: break-all;
+    padding-bottom: 5px;
+}
+
+.dataTar{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.botoes{
+    align-self: flex-end;
+    margin-bottom: 5px;
+}
+
+.gap{
+    height: 60%;
+}
+
+.botao{
+    width: 20px;
+    height: 20px;
 }

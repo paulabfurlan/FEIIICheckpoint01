@@ -6,3 +6,35 @@
 ul {
     list-style-type: none;
   }
+
+.container{
+    display: flex;
+    align-items: space-between;
+}
+
+.tarefas{
+    width: 65%;
+}
+
+.nenhumaTarefa{
+    font-size: 20px;
+}
+
+.tituloTarefas{
+    display: flex;
+}
+
+.h2Tarefas{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.h3Tarefas{
+    padding-top: 35px;
+    font-size: 18px;
+    justify-self: right;
+}
+
+.gapTarefas{
+    width: 75%;
+}
